@@ -1,0 +1,259 @@
+/* Стилі для контейнера авторизації */
+.auth-container {
+  max-width: 400px;
+  margin: clamp(1rem, 5vw, 2rem) auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  background: var(--card-color);
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-align: center;
+  animation: scaleIn 0.6s ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі для заголовка */
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  animation: slideUp 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.auth-container h2:hover {
+  transform: scale(1.02);
+}
+
+/* Стилі для групи полів */
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+  animation: slideInLeft 0.5s ease-out;
+  animation-delay: calc(0.1s * var(--order));
+}
+
+/* Стилі для міток */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+/* Стилі для полів введення */
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #333;
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--button-color);
+  box-shadow: 0 0 8px rgba(var(--button-color-rgb, 242, 140, 0), 0.3);
+}
+
+/* Стилі для кнопки відправки */
+button[type="submit"] {
+  background: var(--button-color);
+  border: none;
+  padding: clamp(0.5rem, 2vw, 0.7rem);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  animation: slideUp 0.6s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(var(--button-color-rgb, 242, 140, 0), 0.3);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+/* Стилі для кнопки Google Sign-In */
+.google-signin-btn {
+  background: #4285F4;
+  border: none;
+  padding: clamp(0.5rem, 2vw, 0.7rem);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  animation: slideInRight 0.6s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.google-signin-btn:hover {
+  background: #3578E5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3);
+}
+
+.google-signin-btn::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('https://www.google.com/favicon.ico') no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+.google-signin-btn:hover::before {
+  transform: rotate(360deg);
+}
+
+/* Стилі для кнопки перемикання */
+.toggle-auth-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  animation: slideUp 0.7s ease-out;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-auth-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--button-hover);
+  transition: width 0.3s ease;
+}
+
+.toggle-auth-btn:hover {
+  color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.toggle-auth-btn:hover::after {
+  width: 100%;
+}
+
+/* Анімації */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Медіа-запити для мобільних */
+@media (max-width: 768px) {
+  .auth-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .form-group {
+    animation-duration: 0.4s;
+  }
+
+  button[type="submit"], .google-signin-btn, .toggle-auth-btn {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    animation-duration: 0.4s;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-group label, .form-group input {
+    font-size: 0.8rem;
+  }
+
+  .google-signin-btn::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Зменшення анімацій для продуктивності */
+  .auth-container, .form-group, button[type="submit"], .google-signin-btn, .toggle-auth-btn {
+    animation-duration: 0.3s;
+  }
+}
+
+/* Доступність: відключення анімацій для prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .auth-container, .auth-container h2, .form-group, button[type="submit"], .google-signin-btn, .toggle-auth-btn {
+    animation: none;
+  }
+
+  .google-signin-btn::before, .toggle-auth-btn::after {
+    transition: none;
+  }
+}

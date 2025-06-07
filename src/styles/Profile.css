@@ -1,0 +1,397 @@
+/* Стилі для контейнера профілю */
+.profile-container {
+  max-width: 1200px;
+  margin: clamp(1rem, 5vw, 2rem) auto;
+  padding: clamp(1rem, 5vw, 2rem);
+  text-align: left;
+  animation: scaleIn 0.6s ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі для заголовків */
+.profile-container h2 {
+  color: var(--text-color);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.profile-container h2:hover {
+  transform: scale(1.02);
+}
+
+.profile-container h3 {
+  color: var(--text-color);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 1rem;
+  animation: slideUp 0.5s ease-out 0.1s;
+  transition: transform 0.3s ease;
+}
+
+.profile-container h3:hover {
+  transform: scale(1.02);
+}
+
+/* Стилі для картки профілю */
+.profile-card {
+  background-color: var(--card-color);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  margin-bottom: clamp(1rem, 4vw, 1.5rem);
+  animation: slideInLeft 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі для заголовка профілю */
+.profile-header {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  align-items: center;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Стилі для аватара */
+.profile-avatar {
+  flex: 0 0 auto;
+}
+
+.avatar-icon {
+  width: clamp(40px, 10vw, 60px);
+  height: clamp(40px, 10vw, 60px);
+  animation: rotateIn 0.8s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.avatar-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Стилі для інформації профілю */
+.profile-info {
+  flex: 1;
+  animation: slideInRight 0.6s ease-out;
+}
+
+.profile-info p {
+  margin: clamp(0.3rem, 1vw, 0.5rem) 0;
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  word-break: break-word;
+}
+
+/* Стилі для кнопки виходу */
+.logout-btn {
+  background-color: #d32f2f;
+  border: none;
+  padding: clamp(0.5rem, 2vw, 0.7rem) clamp(0.8rem, 3vw, 1.2rem);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  animation: slideUp 0.7s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logout-btn:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+}
+
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+/* Стилі для секції тестів користувача */
+.user-tests {
+  background-color: var(--card-color);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  animation: scaleIn 0.6s ease-out 0.2s;
+}
+
+/* Стилі для елемента тесту */
+.test-item {
+  margin-bottom: clamp(0.5rem, 2vw, 0.8rem);
+  padding: clamp(0.5rem, 2vw, 0.8rem);
+  border-bottom: 1px solid #333;
+  animation: slideUp 0.6s ease-out;
+  animation-delay: calc(0.1s * var(--order));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-item:last-child {
+  border-bottom: none;
+}
+
+.test-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.test-item p {
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  margin-bottom: 0.5rem;
+}
+
+/* Стилі для дій із тестом */
+.test-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+}
+
+/* Стилі для кнопки статистики */
+.stats-btn {
+  background-color: #9a01c8;
+  border: none;
+  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.6rem, 2vw, 0.8rem);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  animation: slideUp 0.7s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.stats-btn:hover {
+  background-color: #ac00e1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(154, 1, 200, 0.3);
+}
+
+.stats-btn:active {
+  transform: scale(0.95);
+}
+
+/* Стилі для кнопки видалення */
+.delete-btn {
+  background: #f44336;
+  border: none;
+  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.6rem, 2vw, 0.8rem);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  animation: slideUp 0.7s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Стилі для статистики тесту */
+.test-stats {
+  margin-top: clamp(0.5rem, 2vw, 0.8rem);
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+.test-stats h4 {
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.5s ease-out 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.test-stats h4:hover {
+  transform: scale(1.02);
+}
+
+.test-stats ul {
+  list-style: none;
+  padding: 0;
+}
+
+.test-stats li {
+  margin: clamp(0.3rem, 1vw, 0.5rem) 0;
+  color: var(--text-color);
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  animation: slideInLeft 0.5s ease-out;
+  animation-delay: calc(0.1s * var(--stats-order));
+}
+
+.test-stats p {
+  color: var(--text-color);
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* Анімації */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-90deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Медіа-запити для мобільних */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 1rem;
+  }
+
+  .profile-card, .user-tests {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+
+  .test-item {
+    padding: 0.5rem;
+  }
+
+  .stats-btn, .delete-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  /* Зменшення анімацій для продуктивності */
+  .profile-container, .profile-card, .user-tests, .test-item, .stats-btn, .delete-btn, .logout-btn {
+    animation-duration: 0.4s;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-container h3, .test-stats h4 {
+    font-size: 0.9rem;
+  }
+
+  .profile-info p, .test-item p, .test-stats li, .test-stats p {
+    font-size: 0.8rem;
+  }
+
+  .avatar-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  /* Ще більша оптимізація анімацій */
+  .profile-container, .profile-card, .user-tests, .test-item, .stats-btn, .delete-btn, .logout-btn {
+    animation-duration: 0.3s;
+  }
+}
+
+/* Доступність: відключення анімацій для prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .profile-container, .profile-container h2, .profile-container h3, .profile-card, .avatar-icon,
+  .profile-info, .logout-btn, .user-tests, .test-item, .stats-btn, .delete-btn, .test-stats,
+  .test-stats h4, .test-stats li, .test-stats p {
+    animation: none;
+  }
+
+  .profile-card, .test-item, .logout-btn, .stats-btn, .delete-btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,86 @@
+/* Стилі для футера */
+.footer {
+  background-color: var(--header-bg);
+  padding: clamp(1rem, 5vw, 2rem);
+  color: var(--text-color);
+  border-top: 1px solid #333;
+}
+
+/* Стилі для вмісту футера */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+/* Стилі для секцій футера */
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Стилі для заголовків секцій */
+.footer-section h4 {
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+/* Стилі для списків */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Стилі для елементів списку */
+.footer-section li {
+  margin-bottom: 0.4rem;
+}
+
+/* Стилі для посилань */
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: var(--button-hover);
+}
+
+/* Стилі для параграфів */
+.footer-section p {
+  margin: 0;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+/* Медіа-запити для мобільних */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-section {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer-section a, .footer-section p {
+    font-size: 0.8rem;
+  }
+}
